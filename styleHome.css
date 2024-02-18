@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nav-container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 108px;
+    padding-right: 108px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-bottom: rgb(255, 255, 255) solid 2px;
+}
+
+.logo{
+    margin-left: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav-link{
+    margin-right: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-link a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.nav-link i{
+    vertical-align:baseline;
+    
+}
+
+.nav-link a:hover{
+    color:#8468f5;
+    text-decoration:none;
+    animation: berubah-ukuran 2s alternate;
+}
+
+body{
+  background-color: black;
+}
+
+.main-container{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-content{
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    font-size: 60px;
+    font-family: Tahoma;
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.title span{
+    animation: ubah-warna 5s infinite alternate;
+}
+
+.bottom-content{
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 5px 20px 5px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 30px;
+    font-family:"Mahoma", 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    animation: ubah-posisi 15s infinite alternate-reverse;
+    transition: 1s ease-in;
+    filter: blur(3px);
+}
+
+.bottom-content:hover{
+    border-radius: 40px;
+    transition: 1s ease-out;
+    box-shadow: 15px 15px 85px rgb(255, 255, 255);
+    filter: blur(0px);
+    filter: brightness(2) drop-shadow(1); 
+}
+
+.gradient-text{
+  background: radial-gradient(circle, #5bf519, #4e325c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-bottom-content{
+  background: linear-gradient(to right, #bd8484, #b300ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes ubah-warna{
+    0%{
+    color: #7bc982;
+    }
+    25%{
+    color: #7460cf;
+    }
+    50%{
+    color: #4fdd13;
+    }
+    75%{
+    color: #839ddf;
+    }
+    100%{
+    color: #5adf8f;
+    }
+}
+
+@keyframes ubah-posisi{
+      0% {
+        transform: translateX(0) translateY(0); /* Tengah atas */
+      }
+      12.5% {
+        transform: translateX(100%) translateY(0); /* Kanan atas */
+      }
+      25% {
+        transform: translateX(100%) translateY(100%); /* Kanan bawah */
+      }
+      37.5% {
+        transform: translateX(0) translateY(100%); /* Tengah bawah */
+      }
+      50% {
+        transform: translateX(0) translateY(0); /* Kembali ke tengah atas */
+      }
+      62.5% {
+        transform: translateX(-100%) translateY(0); /* Kiri atas */
+      }
+      75% {
+        transform: translateX(-100%) translateY(100%); /* Kiri bawah */
+      }
+      87.5% {
+        transform: translateX(0) translateY(100%); /* Kembali ke tengah bawah */
+      }
+      100% {
+        transform: translateX(0) translateY(0); /* Akhirnya di tengah atas */
+      }
+}
+
+@keyframes berubah-ukuran{
+    from{
+      transform: scale(1);
+    }
+      to{
+      transform: scale(1.05);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .nav-container{
+      padding: 0px;
+      gap: 5px;
+      margin: auto;
+    }
+    .logo{
+      margin: auto;
+      font-size: 15px;
+    }
+    .nav-link{
+      margin: auto;
+      gap: 10px;
+
+    }
+    .nav-link i{
+      margin-top: 10px;
+      size: 0.1cm;
+      align-items: center;
+      flex-direction: column;
+      display: flex;
+    }
+
+    .title p{
+      font-size: 44px
+    }
+
+    .bottom-content p{
+      display: none;
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .nav-container{
+    padding: 40px;
+    gap: 10px;
+  }
+  .logo{
+    margin: auto;
+    font-size: 24px;
+  }
+  .nav-link{
+    margin: auto;
+    gap: 50px;
+    font-size: 18px;
+  }
+  .title p{
+    font-size: 64px
+  }
+}

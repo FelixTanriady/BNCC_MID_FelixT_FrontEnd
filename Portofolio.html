@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylePortofolio.css">
+    <link rel="stylesheet" href="slideshow.js">
+
+    <script src="https://kit.fontawesome.com/f81cbb14c7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <title>About Felix Tanriady</title>
+</head>
+<body>
+    <nav class ="nav-container">
+        <div class="logo">
+            <h3 style="font-family: Segoe UI, 'Tahoma', Geneva, Verdana, sans-serif">Felix Tanriady</h3>
+        </div>
+
+        <div class="nav-link">
+            <a href="Home.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="AboutMe.html"><i class="fa-solid fa-user"></i>  About Me</a>
+            <a href="Portofolio.html"><i class="fa-solid fa-file-contract"></i> Portofolio</a>
+            <a href="Contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+        </div>
+    </nav>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Asset/port1.png" alt="Project 1">
+            <div class="project-description">
+                <p>Portofolio pertama menggunakan HTML/CSS.</p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="Asset/port2.png" alt="Project 2">
+            <div class="project-description">
+                <p>Program C - menggunakan fitur display, searching, sorting, dan export data.</p>
+            </div>  
+        </div>
+
+        <div class="mySlides fade">
+            <img src="Asset/port3.png" alt="Project 3">
+            <div class="project-description">
+                <p>Latihan membuat tampilan awal website</p>
+            </div>  
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        
+        <script src="slideshow.js"></script>
+        
+        <!-- pakai gpt untuk js dan slideshow -->
+
+</body>
+</html>
